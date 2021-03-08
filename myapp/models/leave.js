@@ -2,9 +2,7 @@ const _ = require('underscore');
 const DATA_DATE_FORMAT = 'DD-MMM-YYYY';
 const allEmps = require('../data/employee').employee;
 const im = require('../data/bizType').im;
-// console.log(im)
 const ce = require('../data/bizType').ce;
-// console.log(ce)
 const m = require('moment');
 
 const splitEmpBasedOnEligibility = (endDate) => {    
@@ -54,7 +52,9 @@ const getCEEligiblieQuarter = (jd) => {
 
 const getFullQuarters = (endDate, jd) => {
     return endDate.endOf('quarter').diff(jd.endOf('quarter'),'months')/3;
+   
 }
+
 
 const getMonths = (endDate, jd) => {
     console.log(jd.endOf('month').add(1,'seconds'))
